@@ -18,7 +18,8 @@ void gaussianSmoothing1()
                             7, 26, 41, 26, 7,
                             4, 16, 26, 16, 4,
                             1, 4, 7, 4, 1};
-    cv::Mat kernel = cv::Mat(5, 5, CV_32F, gauss_data);
+    //gauss_data[]=gauss_data[]/273;
+    cv::Mat kernel = cv::Mat(5, 5, CV_32F, gauss_data)/(float)(273.0);
 
     // apply filter
     cv::Mat result;
